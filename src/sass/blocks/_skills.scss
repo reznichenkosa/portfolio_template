@@ -1,0 +1,90 @@
+.skills {
+    padding-top: 120px;
+    
+    &__title {
+        position: relative;
+        text-align: center;
+        @include before_circle;
+        &:before {
+            top: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__subtitle {
+        text-align: center;
+        @include after_divider;
+        &::after {
+            margin: 25px auto 0;
+        }
+    }
+    
+    &__wrapper {
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 13px 13px;
+        grid-auto-rows: 1fr;
+    }
+
+    &__item {
+        padding: 30px 30px 25px;
+        border: 1px solid black;
+
+        &-img {
+            height: 65px;
+            position: relative;
+            img {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+        &-title {
+            margin-top: 20px;
+        }
+        &-descr {
+            margin-top: 20px;
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+
+    &__box {
+        margin-top: 120px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 35px 45px;
+        grid-auto-rows: 1fr;
+    }
+
+    &__level {
+        position: relative;
+        &-title {
+            padding-left: 11px;
+            position: relative;
+            @include before_circle;  
+        }
+        &-percent {
+            right: 0;
+            top: 0;
+            position: absolute;
+            font-size: 14px;
+            line-height: 25px;
+        }
+        &-back {
+            margin-top: 27px;
+            width: 350px;
+            height: 14px;
+            background: #E8E4DE;
+            border-radius: 4px;
+        }
+        &-progress {
+            background: #FFA501;
+            height: 100%;
+            border-radius: 4px;
+        }
+    }
+}
+

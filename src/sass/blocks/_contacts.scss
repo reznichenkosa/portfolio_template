@@ -1,0 +1,103 @@
+.contacts {
+    padding: 120px 45px 92px;
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 400px 585px;
+        column-gap: 68px;
+    }
+    &__info {
+        padding-top: 7px;
+    }
+    &__title {
+        position: relative;
+        padding-left: 11px;
+        @include before-circle;
+    }
+
+    &__subtitle {
+        position: relative;
+        @include after-divider;
+    }
+
+    &__text {
+        margin-top: 20px;
+        margin-bottom: 0;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    &__social {
+        margin-top: 20px;
+        display: flex;
+        width: 135px;
+        justify-content: space-between;
+        a {
+            display: block;
+            &:first-child {
+                transform: rotate(90deg);
+            }
+            &:last-child {
+                transform: rotate(90deg);
+            }
+            img {
+                width: 30px;
+            }
+        }
+    }
+    &__form {
+        margin-top: 25px;
+        input {
+            position: relative;
+            width: 280px;
+            height: 45px;
+            border: 1px solid #000000;
+            padding: 0 20px;
+            font-size: 12px;
+            line-height: 18px;
+        }
+        label {
+            padding: 0 8px;
+            height: 18px;
+            text-align: center;
+            background-color: white;
+            left: 13px;
+            top: -9px;
+            position: absolute;
+            font-size: 12px;
+            line-height: 18px;
+            z-index: 5;
+        }
+        textarea {
+            width: 585px;
+            height: 190px;
+            padding: 20px;
+            font-size: 12px;
+            line-height: 18px;
+            resize: none;
+        }
+        &-name {
+            position: relative;
+            display: inline-block;
+            width: 280px;
+            margin-right: 25px;
+        }
+        &-email {
+            position: relative;
+            display: inline-block;
+            width: 280px;
+        }
+        &-message {
+            position: relative;
+            margin-top: 20px;
+        }
+        &-btn {
+            margin-top: 34px;
+            width: 219px;
+            height: 45px;
+            font-size: 14px;
+            line-height: 14px;
+            border: none;
+        }
+    }
+}
