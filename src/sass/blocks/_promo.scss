@@ -2,7 +2,12 @@
     position: relative;
     min-height: 100vh;
     background: url('../img/main_bg.jpg') center (center/cover) no-repeat;
-    padding: 205px 0 0 0;
+    &__wrapper {
+        max-height: 380px;
+        position: relative;
+        top: 50vh;
+        transform: translateY(-50%);
+    }
     &__title {
         margin-top: 8px;
         max-width: 532px;

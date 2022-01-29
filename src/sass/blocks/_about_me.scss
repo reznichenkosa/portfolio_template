@@ -3,7 +3,6 @@
     &__wrapper {
         display: grid;
         grid-template: minmax(245px, auto) minmax(255px, auto) / minmax(auto, 400px) minmax(auto, 670px);
-        grid-auto-rows: minmax(255px, auto);
         gap: 40px 70px;
     }
     &__photo {
@@ -49,7 +48,7 @@
         }
         &-descr {
             font-size: 12px;
-            width: 200px;
+            width: 100%;
         }
     }
 }

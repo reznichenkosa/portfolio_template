@@ -1,8 +1,15 @@
 .contacts {
     padding: 120px 45px 92px;
+    &__img {
+        img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+    }
     &__wrapper {
         display: grid;
-        grid-template-columns: 400px 585px;
+        grid-template-columns: minmax(auto, 400px) minmax(auto, 585px);
         column-gap: 68px;
     }
     &__info {
@@ -34,6 +41,8 @@
         justify-content: space-between;
         a {
             display: block;
+            width: 30px;
+            height: 30px;
             &:first-child {
                 transform: rotate(90deg);
             }
@@ -41,7 +50,7 @@
                 transform: rotate(90deg);
             }
             img {
-                width: 30px;
+                width: 100%;
             }
         }
     }
@@ -49,7 +58,7 @@
         margin-top: 25px;
         input {
             position: relative;
-            width: 280px;
+            width: 100%;
             height: 45px;
             border: 1px solid #000000;
             padding: 0 20px;
@@ -69,23 +78,27 @@
             z-index: 5;
         }
         textarea {
-            width: 585px;
+            width: 100%;
             height: 190px;
             padding: 20px;
+            border: 1px solid #000000;
             font-size: 12px;
             line-height: 18px;
             resize: none;
         }
+        &-inputs {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 100%;
+        }
         &-name {
             position: relative;
-            display: inline-block;
-            width: 280px;
-            margin-right: 25px;
+            min-width: 285px;
         }
         &-email {
             position: relative;
-            display: inline-block;
-            width: 280px;
+            min-width: 285px;
         }
         &-message {
             position: relative;
